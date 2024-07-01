@@ -1,0 +1,14 @@
+<h2>{{ isEditMode ? 'Edit Post' : 'Create Post' }}</h2>
+<form (ngSubmit)="savePost()">
+  <label>
+    Title:
+    <input [(ngModel)]="post.title" name="title">
+  </label>
+  <br>
+  <label>
+    Content:
+    <textarea [(ngModel)]="post.content" name="content"></textarea>
+  </label>
+  <br>
+  <button type="submit">{{ isEditMode ? 'Save' : 'Create' }}</button>
+</form>

@@ -1,0 +1,7 @@
+<h2>Blog Posts</h2>
+<ul>
+  <li *ngFor="let post of posts">
+    <a [routerLink]="['/blog', post.id]">{{ post.title }}</a>
+  </li>
+</ul>
+<a [routerLink]="['/create']">Create New Post</a>
